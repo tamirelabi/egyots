@@ -1,0 +1,188 @@
+import type { Metadata } from "next";
+import { Target, Eye, Award, Lightbulb, Shield, Play } from 'lucide-react';
+import ScrollReveal from '@/components/ScrollReveal';
+import ImageWithFallback from '@/components/figma/ImageWithFallback';
+import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: "Company | EGYOTS - Egypt Oil Tools & Services",
+  description: "Leading the energy industry with innovative engineering solutions since 2002.",
+};
+
+export default function CompanyPage() {
+  return (
+    <div className="overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative h-[480px] flex items-center justify-center text-center">
+        <div className="absolute inset-0 z-0">
+          <ImageWithFallback 
+            src="https://images.unsplash.com/photo-1593854519602-687eae339d57?w=1400&q=80&fit=crop" 
+            alt="About EGYOTS" 
+            className="w-full h-full"
+          />
+          <div className="absolute inset-0 bg-black/58"></div>
+        </div>
+        <div className="section-container relative z-10 text-white py-0">
+          <ScrollReveal>
+            <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4">About EGYOTS</h1>
+            <p className="text-xl text-white/80 max-w-2xl mx-auto">
+              Leading the energy industry with innovative engineering solutions since 2002
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Our Story */}
+      <section className="section-container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <ScrollReveal direction="right">
+          <span className="section-tag">Our Story</span>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6">A Legacy of Innovation</h2>
+          <div className="space-y-4 text-muted leading-relaxed">
+            <p>
+              Founded in 2002, EGYOTS (Egypt Oil Tools & Services) began with a clear vision: to provide the oil and gas industry with superior engineering solutions and high-performance tools that enhance operational efficiency.
+            </p>
+            <p>
+              Over the years, we have grown from a local service provider into a significant regional player, expanding our reach across the Middle East, North Africa, and North America. Our growth has been fueled by our unwavering commitment to quality and our ability to adapt to the evolving needs of the energy sector.
+            </p>
+            <p>
+              Today, EGYOTS stands as a trusted partner for major energy companies, offering a comprehensive suite of services and equipment designed to meet the most demanding technical requirements in both traditional and renewable energy sectors.
+            </p>
+          </div>
+        </ScrollReveal>
+        <ScrollReveal direction="left">
+          <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
+            <ImageWithFallback 
+              src="https://images.unsplash.com/photo-1769147339214-076740872485?w=800&q=80&fit=crop" 
+              alt="Our Story" 
+              className="w-full h-full"
+            />
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="bg-[#fafaf8] py-20">
+        <div className="section-container py-0 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <ScrollReveal direction="right" className="bg-white p-10 rounded-xl border-2 border-primary/15 shadow-sm">
+            <div className="text-primary mb-6">
+              <Target size={48} />
+            </div>
+            <h3 className="text-2xl font-headline font-bold mb-4 text-primary">Our Mission</h3>
+            <p className="text-muted leading-relaxed">
+              To deliver exceptional engineering solutions and oilfield equipment that empower our clients to achieve their production goals safely, efficiently, and sustainably. We strive to be at the forefront of technical innovation in the energy industry.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal direction="left" className="bg-white p-10 rounded-xl border-2 border-primary/15 shadow-sm">
+            <div className="text-primary mb-6">
+              <Eye size={48} />
+            </div>
+            <h3 className="text-2xl font-headline font-bold mb-4 text-primary">Our Vision</h3>
+            <p className="text-muted leading-relaxed">
+              To be the global leader in energy engineering services, recognized for our technical excellence, operational integrity, and commitment to driving the future of energy through innovation and sustainable practices.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Core Values */}
+      <section className="section-container text-center">
+        <ScrollReveal>
+          <span className="section-tag mx-auto">What Drives Us</span>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold mb-16">Our Core Values</h2>
+        </ScrollReveal>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            { icon: Award, title: "Quality", desc: "Uncompromising commitment to the highest industry standards in everything we do." },
+            { icon: Lightbulb, title: "Innovation", desc: "Continuously seeking new and better ways to solve complex engineering challenges." },
+            { icon: Shield, title: "Safety", desc: "Prioritizing the well-being of our people, our clients, and the environment." },
+            { icon: Play, title: "Reliability", desc: "Delivering consistent, high-performance results that our partners can depend on." },
+          ].map((value, i) => (
+            <ScrollReveal key={i} delay={i * 0.1} className="flex flex-col items-center">
+              <div className="text-primary mb-6">
+                <value.icon size={40} />
+              </div>
+              <h3 className="text-xl font-headline font-bold mb-3">{value.title}</h3>
+              <p className="text-muted text-sm leading-relaxed">{value.desc}</p>
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section className="bg-[#fafaf8] py-20">
+        <div className="section-container py-0">
+          <ScrollReveal className="text-center mb-16">
+            <span className="section-tag mx-auto">Compliance</span>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">Industry Certifications</h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { code: "API", name: "American Petroleum Institute", desc: "Certified for the manufacture and service of critical oilfield equipment." },
+              { code: "ASME", name: "American Society of Mechanical Engineers", desc: "Compliance with international standards for pressure vessel design." },
+              { code: "ISO", name: "International Organization for Standardization", desc: "Certified quality management systems ensuring consistent excellence." },
+            ].map((cert, i) => (
+              <ScrollReveal key={i} delay={i * 0.1} className="bg-white p-8 rounded-xl border-2 border-primary/12 text-center">
+                <div className="text-4xl font-headline font-bold text-primary mb-4">{cert.code}</div>
+                <h3 className="text-lg font-headline font-bold mb-3">{cert.name}</h3>
+                <p className="text-muted text-sm leading-relaxed">{cert.desc}</p>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Offices */}
+      <section className="section-container">
+        <ScrollReveal className="text-center mb-16">
+          <span className="section-tag mx-auto">Global Presence</span>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">Our Offices</h2>
+        </ScrollReveal>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <ScrollReveal direction="right" className="card-base overflow-hidden">
+            <div className="h-[180px]">
+              <ImageWithFallback 
+                src="https://images.unsplash.com/photo-1740211803526-e8ac9ec056c8?w=600&q=80&fit=crop" 
+                alt="Cairo Office" 
+                className="w-full h-full"
+              />
+            </div>
+            <div className="p-8">
+              <h3 className="text-xl font-headline font-bold mb-2">Cairo, Egypt</h3>
+              <p className="text-primary font-medium text-sm mb-4">Main Office & Manufacturing</p>
+              <p className="text-muted text-sm">Industrial Zone, Cairo, Egypt</p>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal direction="left" className="card-base overflow-hidden">
+            <div className="h-[180px]">
+              <ImageWithFallback 
+                src="https://images.unsplash.com/photo-1771530789155-b1f03fbf82b5?w=600&q=80&fit=crop" 
+                alt="Houston Office" 
+                className="w-full h-full"
+              />
+            </div>
+            <div className="p-8">
+              <h3 className="text-xl font-headline font-bold mb-2">Houston, Texas</h3>
+              <p className="text-primary font-medium text-sm mb-4">US Operations Center</p>
+              <p className="text-muted text-sm">Houston, Texas, United States</p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-[#eef6ed] py-20">
+        <div className="section-container py-0 text-center">
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold mb-10">
+              Ready to work with EGYOTS?
+            </h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/contact" className="btn-primary btn-lg">Get in Touch</Link>
+              <Link href="/services" className="btn-outline btn-lg">View Services</Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+    </div>
+  );
+}
