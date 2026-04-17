@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 
 const locations = [
-  { name: 'Houston, USA', lat: 29.76, lon: -95.37, service: 'US Operations Hub', detail: 'Artificial lift systems, jet pump installations, engineering support' },
+  { name: 'Alexandria, Egypt', lat: 31.20, lon: 29.92, service: 'Manufacturing Facility', detail: 'ASME pressure vessel fabrication, API certified manufacturing, Alexandria Free Zone' },
   { name: 'Cairo, Egypt', lat: 30.04, lon: 31.24, service: 'Main Office & Manufacturing', detail: 'Completion tools, well testing packages, early production facilities' },
   { name: 'Tripoli, Libya', lat: 32.89, lon: 13.18, service: 'Gas Processing Projects', detail: 'Gas separation units, line heaters, choke manifolds' },
   { name: 'Riyadh, Saudi Arabia', lat: 24.69, lon: 46.72, service: 'Downhole Completion Tools', detail: 'Packers, bridge plugs, flow control equipment for major NOC projects' },
