@@ -20,7 +20,7 @@ export default function HomePage() {
             alt="EGYOTS Hero" 
             className="w-full h-full"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/72 via-black/45 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/40"></div>
         </div>
         
         <div className="section-container relative z-10 text-white">
