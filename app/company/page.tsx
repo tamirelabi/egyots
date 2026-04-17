@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Target, Eye, Award, Lightbulb, Shield, Play } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 import ImageWithFallback from '@/components/figma/ImageWithFallback';
-import Link from 'next/link';
+import Link from 'next/link'
+import GlobalMap from '@/components/GlobalMap';
 
 export const metadata: Metadata = {
   title: "Company | EGYOTS - Egypt Oil Tools & Services",
@@ -131,32 +132,65 @@ export default function CompanyPage() {
         </div>
       </section>
 
+      {/* Global Presence Map */}
+      <section className="py-20 bg-[#0f1a2a]">
+        <div className="section-container py-0">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <span className="section-tag mx-auto" style={{ color: '#A7D09A' }}>Where We Work</span>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4" style={{ color: '#ffffff' }}>
+                Global Presence
+              </h2>
+              <p className="font-subheading text-xl max-w-2xl mx-auto" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                Delivering engineering solutions across the Middle East, North Africa, and the Americas.
+              </p>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={0.2}>
+            <GlobalMap />
+          </ScrollReveal>
+          <div className="grid grid-cols-3 gap-8 mt-10 text-center">
+            <div>
+              <div className="text-3xl font-headline font-bold" style={{ color: '#A7D09A' }}>10+</div>
+              <div className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.6)' }}>Countries</div>
+            </div>
+            <div>
+              <div className="text-3xl font-headline font-bold" style={{ color: '#A7D09A' }}>3</div>
+              <div className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.6)' }}>Continents</div>
+            </div>
+            <div>
+              <div className="text-3xl font-headline font-bold" style={{ color: '#A7D09A' }}>500+</div>
+              <div className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.6)' }}>Projects Delivered</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Our Offices */}
       <section className="section-container">
         <ScrollReveal className="text-center mb-16">
-          <span className="section-tag mx-auto">Global Presence</span>
           <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">Our Offices</h2>
         </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <ScrollReveal direction="right" className="card-base overflow-hidden">
             <div className="h-[180px]">
-              <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1740211803526-e8ac9ec056c8?w=600&q=80&fit=crop" 
-                alt="Cairo Office" 
+              <ImageWithFallback
+                src="https://images.unsplash.com/photo-1740211803526-e8ac9ec056c8?w=600&q=80&fit=crop"
+                alt="Cairo Office"
                 className="w-full h-full"
               />
             </div>
             <div className="p-8">
               <h3 className="text-xl font-headline font-bold mb-2">Cairo, Egypt</h3>
-              <p className="text-primary font-medium text-sm mb-4">Main Office & Manufacturing</p>
+              <p className="text-primary font-medium text-sm mb-4">Main Office &amp; Manufacturing</p>
               <p className="text-muted text-sm">Industrial Zone, Cairo, Egypt</p>
             </div>
           </ScrollReveal>
           <ScrollReveal direction="left" className="card-base overflow-hidden">
             <div className="h-[180px]">
-              <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1771530789155-b1f03fbf82b5?w=600&q=80&fit=crop" 
-                alt="Houston Office" 
+              <ImageWithFallback
+                src="https://images.unsplash.com/photo-1771530789155-b1f03fbf82b5?w=600&q=80&fit=crop"
+                alt="Houston Office"
                 className="w-full h-full"
               />
             </div>
