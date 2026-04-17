@@ -4,7 +4,8 @@ import ScrollReveal from '@/components/ScrollReveal';
 import ImageWithFallback from '@/components/figma/ImageWithFallback';
 import Link from 'next/link'
 import GlobalMap from '@/components/GlobalMap'
-import CertificatesViewer from '@/components/CertificatesViewer';
+import CertificatesViewer from '@/components/CertificatesViewer'
+import ClientLogosStrip from '@/components/ClientLogosStrip';
 
 export const metadata: Metadata = {
   title: "Company | EGYOTS - Egypt Oil Tools & Services",
@@ -85,6 +86,8 @@ export default function CompanyPage() {
           </ScrollReveal>
         </div>
       </section>
+
+      <ClientLogosStrip />
 
       {/* Core Values */}
       <section className="section-container text-center">
