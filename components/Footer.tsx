@@ -35,8 +35,8 @@ export default function Footer() {
             <div className="flex items-start space-x-3">
               <MapPin size={18} className="text-secondary shrink-0 mt-1" />
               <div>
-                <p className="font-medium text-sm">Houston, Texas</p>
-                <p className="text-gray-400 text-xs">US Operations Center</p>
+                <p className="font-medium text-sm">Alexandria, Egypt</p>
+                <p className="text-gray-400 text-xs">Manufacturing Facility</p>
               </div>
             </div>
           </div>
