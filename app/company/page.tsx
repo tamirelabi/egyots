@@ -184,14 +184,14 @@ export default function CompanyPage() {
             <div className="h-[180px]">
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1771530789155-b1f03fbf82b5?w=600&q=80&fit=crop"
-                alt="Houston Office"
+                alt="Alexandria Office"
                 className="w-full h-full"
               />
             </div>
             <div className="p-8">
-              <h3 className="text-xl font-headline font-bold mb-2">Houston, Texas</h3>
-              <p className="text-primary font-medium text-sm mb-4">US Operations Center</p>
-              <p className="text-muted text-sm">Houston, Texas, United States</p>
+              <h3 className="text-xl font-headline font-bold mb-2">Alexandria, Egypt</h3>
+              <p className="text-primary font-medium text-sm mb-4">Manufacturing Facility</p>
+              <p className="text-muted text-sm">Alexandria Free Zone, Alexandria, Egypt</p>
             </div>
           </ScrollReveal>
         </div>
