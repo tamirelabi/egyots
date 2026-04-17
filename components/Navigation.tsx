@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -22,8 +23,11 @@ export default function Navigation() {
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-black/5 shadow-sm">
       <div className="max-w-[1200px] mx-auto px-6 flex justify-between items-center h-[72px]">
-        <Link href="/" className="font-headline font-bold text-primary text-xl md:text-2xl tracking-tight">
-          EGYOTS <span className="hidden md:inline text-sm font-medium text-muted ml-1">— Egypt Oil Tools & Services</span>
+        <Link href="/" className="flex items-center gap-3">
+          <div className="relative h-10 w-24">
+            <Image src="/logo-dark-transparent.png" alt="EGYOTS Logo" fill style={{ objectFit: 'contain', objectPosition: 'left' }} priority />
+          </div>
+          <span className="hidden md:inline text-sm font-medium text-muted">Egypt Oil Tools & Services</span>
         </Link>
 
         <div className="hidden md:flex items-center space-x-8">
