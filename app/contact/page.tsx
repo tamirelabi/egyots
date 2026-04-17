@@ -5,8 +5,8 @@ import ImageWithFallback from '@/components/figma/ImageWithFallback';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
-  title: "Contact EGYOTS | Cairo & Houston Offices",
-  description: "Get in touch with EGYOTS engineering and sales teams. Main office in Cairo, Egypt. US operations in Houston, Texas.",
+  title: "Contact EGYOTS | Cairo & Alexandria Offices",
+  description: "Get in touch with EGYOTS engineering and sales teams. Head office in Cairo, Egypt. Manufacturing facility in Alexandria, Egypt.",
 };
 
 export default function ContactPage() {
@@ -64,15 +64,15 @@ export default function ContactPage() {
 
           <ScrollReveal direction="left" delay={0.2}>
             <div className="bg-white border border-black/8 rounded-[10px] p-8 space-y-6">
-              <h3 className="text-xl font-headline font-bold text-primary">Houston Office</h3>
+              <h3 className="text-xl font-headline font-bold text-primary">Alexandria Office</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
                   <MapPin className="text-primary shrink-0 mt-1" size={20} />
-                  <span className="text-muted text-sm">Houston, Texas, USA</span>
+                  <span className="text-muted text-sm">Alexandria Free Zone, Alexandria, Egypt</span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <Mail className="text-primary shrink-0" size={20} />
-                  <span className="text-muted text-sm">us@egyots.com</span>
+                  <span className="text-muted text-sm">info@egyptoiltools.com</span>
                 </div>
               </div>
             </div>
