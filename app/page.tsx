@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { CheckCircle, Settings, Flame, Globe, Gauge, Factory, Wrench, Zap, ArrowRight } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 import ImageWithFallback from '@/components/figma/ImageWithFallback'
-import GlobalMap from '@/components/GlobalMap';
+import GlobalMap from '@/components/GlobalMap'
+import ClientLogosStrip from '@/components/ClientLogosStrip';
 
 export const metadata: Metadata = {
   title: "Oil & Gas Engineering Solutions Since 2002",
@@ -63,6 +64,8 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <ClientLogosStrip />
 
       {/* Company Overview */}
       <section className="section-container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
