@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Mail, Phone, MapPin, Linkedin, Facebook, Twitter } from 'lucide-react'
 
 export default function Footer() {
@@ -6,8 +7,9 @@ export default function Footer() {
     <footer className="bg-[#1a1a1a] text-white pt-20 pb-10">
       <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         <div>
-          <h3 className="font-headline font-bold text-2xl mb-2">EGYOTS</h3>
-          <p className="text-secondary font-headline font-semibold text-sm mb-4">Egypt Oil Tools & Services</p>
+          <div className="relative h-16 w-36 mb-4">
+            <Image src="/logo-light.png" alt="EGYOTS Logo" fill style={{ objectFit: 'contain', objectPosition: 'left' }} />
+          </div>
           <p className="text-gray-400 text-sm leading-relaxed">
             Engineering and manufacturing innovative solutions for the oil, gas, and renewable energy sectors since 2002.
           </p>
