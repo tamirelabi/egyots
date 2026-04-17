@@ -3,7 +3,8 @@ import { Target, Eye, Award, Lightbulb, Shield, Play } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 import ImageWithFallback from '@/components/figma/ImageWithFallback';
 import Link from 'next/link'
-import GlobalMap from '@/components/GlobalMap';
+import GlobalMap from '@/components/GlobalMap'
+import CertificatesViewer from '@/components/CertificatesViewer';
 
 export const metadata: Metadata = {
   title: "Company | EGYOTS - Egypt Oil Tools & Services",
@@ -112,23 +113,16 @@ export default function CompanyPage() {
       {/* Certifications */}
       <section className="bg-[#fafaf8] py-20">
         <div className="section-container py-0">
-          <ScrollReveal className="text-center mb-16">
+          <ScrollReveal className="text-center mb-12">
             <span className="section-tag mx-auto">Compliance</span>
             <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">Industry Certifications</h2>
+            <p className="font-subheading text-xl text-muted max-w-2xl mx-auto">
+              Click any certificate to view or download the full document.
+            </p>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { code: "API", name: "American Petroleum Institute", desc: "Certified for the manufacture and service of critical oilfield equipment." },
-              { code: "ASME", name: "American Society of Mechanical Engineers", desc: "Compliance with international standards for pressure vessel design." },
-              { code: "ISO", name: "International Organization for Standardization", desc: "Certified quality management systems ensuring consistent excellence." },
-            ].map((cert, i) => (
-              <ScrollReveal key={i} delay={i * 0.1} className="bg-white p-8 rounded-xl border-2 border-primary/12 text-center">
-                <div className="text-4xl font-headline font-bold text-primary mb-4">{cert.code}</div>
-                <h3 className="text-lg font-headline font-bold mb-3">{cert.name}</h3>
-                <p className="text-muted text-sm leading-relaxed">{cert.desc}</p>
-              </ScrollReveal>
-            ))}
-          </div>
+          <ScrollReveal delay={0.2}>
+            <CertificatesViewer />
+          </ScrollReveal>
         </div>
       </section>
 
