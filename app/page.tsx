@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from 'next/link';
 import { CheckCircle, Settings, Flame, Globe, Gauge, Factory, Wrench, Zap, ArrowRight } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
-import ImageWithFallback from '@/components/figma/ImageWithFallback';
+import ImageWithFallback from '@/components/figma/ImageWithFallback'
+import GlobalMap from '@/components/GlobalMap';
 
 export const metadata: Metadata = {
   title: "Oil & Gas Engineering Solutions Since 2002",
@@ -25,10 +26,10 @@ export default function HomePage() {
         
         <div className="section-container relative z-10 text-white">
           <ScrollReveal direction="right">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold mb-6 max-w-[700px] leading-[1.1]">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold mb-6 max-w-[700px] leading-[1.1]" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.5)' }}>
               Delivering Oil & Gas Engineering Solutions Since 2002
             </h1>
-            <p className="font-subheading text-xl md:text-2xl text-white/88 mb-10 max-w-[600px]">
+            <p className="font-subheading text-xl md:text-2xl text-white mb-10 max-w-[600px]" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.5)' }}>
               Engineering and manufacturing innovative solutions for the oil, gas, and renewable energy sectors.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -206,6 +207,41 @@ export default function HomePage() {
               </div>
             </div>
           </ScrollReveal>
+        </div>
+      </section>
+
+
+      {/* Global Presence */}
+      <section className="py-20 bg-[#0f1a2a]">
+        <div className="section-container py-0">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <span className="section-tag mx-auto" style={{ color: '#A7D09A' }}>Where We Work</span>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4" style={{ color: '#ffffff' }}>
+                Global Presence
+              </h2>
+              <p className="font-subheading text-xl max-w-2xl mx-auto" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                Delivering engineering solutions across the Middle East, North Africa, and the Americas.
+              </p>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={0.2}>
+            <GlobalMap />
+          </ScrollReveal>
+          <div className="grid grid-cols-3 gap-8 mt-10 text-center">
+            <div>
+              <div className="text-3xl font-headline font-bold" style={{ color: '#A7D09A' }}>10+</div>
+              <div className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.6)' }}>Countries</div>
+            </div>
+            <div>
+              <div className="text-3xl font-headline font-bold" style={{ color: '#A7D09A' }}>3</div>
+              <div className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.6)' }}>Continents</div>
+            </div>
+            <div>
+              <div className="text-3xl font-headline font-bold" style={{ color: '#A7D09A' }}>500+</div>
+              <div className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.6)' }}>Projects Delivered</div>
+            </div>
+          </div>
         </div>
       </section>
 
