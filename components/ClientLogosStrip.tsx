@@ -25,6 +25,14 @@ const clients = [
   { name: 'Petroamir', file: '/clients/client-petroamir.png' },
   { name: 'South Dabaa', file: '/clients/client-south-dabaa.png' },
   { name: 'Tanmia', file: '/clients/client-tanmia.png' },
+  { name: 'Halliburton', file: '/clients/client-halliburton.png' },
+  { name: 'Baker Hughes', file: '/clients/client-baker-hughes.png' },
+  { name: 'Weatherford', file: '/clients/client-weatherford.png' },
+  { name: 'Al Khorayef', file: '/clients/client-al-khorayef.png' },
+  { name: 'NESR', file: '/clients/client-nesr.png' },
+  { name: 'Expro', file: '/clients/client-expro.png' },
+  { name: 'Pico Energy', file: '/clients/client-pico-energy.png' },
+  { name: 'Ankor Pointe', file: '/clients/client-ankor-pointe.png' },
 ]
 
 export default function ClientLogosStrip() {
