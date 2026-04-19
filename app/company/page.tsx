@@ -148,7 +148,7 @@ export default function CompanyPage() {
           </ScrollReveal>
           <div className="grid grid-cols-3 gap-8 mt-10 text-center">
             <div>
-              <div className="text-3xl font-headline font-bold" style={{ color: '#A7D09A' }}>10+</div>
+              <div className="text-3xl font-headline font-bold" style={{ color: '#A7D09A' }}>12</div>
               <div className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.6)' }}>Countries</div>
             </div>
             <div>
@@ -194,7 +194,7 @@ export default function CompanyPage() {
             <div className="p-8">
               <h3 className="text-xl font-headline font-bold mb-2">Alexandria, Egypt</h3>
               <p className="text-primary font-medium text-sm mb-4">Manufacturing Facility</p>
-              <p className="text-muted text-sm">Alexandria Free Zone, Alexandria, Egypt</p>
+              <p className="text-muted text-sm">2QJ9+5J3, Ekeingy Maryout, Amreya 1, Alexandria Governorate 524820</p>
             </div>
           </ScrollReveal>
         </div>
