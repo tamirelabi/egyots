@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 
 const locations = [
-  { name: 'Alexandria, Egypt', lat: 31.20, lon: 29.92, service: 'Manufacturing Facility', detail: 'ASME pressure vessel fabrication, API certified manufacturing, Alexandria Free Zone' },
+  { name: 'Alexandria, Egypt', lat: 31.20, lon: 29.92, service: 'Manufacturing Facility', detail: 'Ekeingy Maryout, Amreya 1, Alexandria Governorate 524820' },
   { name: 'Cairo, Egypt', lat: 30.04, lon: 31.24, service: 'Main Office & Manufacturing', detail: 'Completion tools, well testing packages, early production facilities' },
   { name: 'Tripoli, Libya', lat: 32.89, lon: 13.18, service: 'Gas Processing Projects', detail: 'Gas separation units, line heaters, choke manifolds' },
   { name: 'Riyadh, Saudi Arabia', lat: 24.69, lon: 46.72, service: 'Downhole Completion Tools', detail: 'Packers, bridge plugs, flow control equipment for major NOC projects' },
@@ -100,10 +100,11 @@ export default function GlobalMap() {
             .style('cursor', 'pointer')
             .on('mouseenter', function (this: SVGCircleElement) {
               d3.select(this).transition().duration(150).attr('r', 7).attr('fill', '#3C6E4A')
+              const showDetail = loc.detail !== 'Project details coming soon'
               tt.innerHTML = `
                 <div style="font-weight:600;font-size:14px;color:#A7D09A;margin-bottom:4px">${loc.name}</div>
                 <div style="color:#ddd;font-size:12px">${loc.service}</div>
-                <div style="color:#999;font-size:11px;margin-top:3px">${loc.detail}</div>`
+                ${showDetail ? `<div style="color:#999;font-size:11px;margin-top:3px">${loc.detail}</div>` : ''}` 
               tt.style.opacity = '1'
             })
             .on('mousemove', function (event: MouseEvent) {
