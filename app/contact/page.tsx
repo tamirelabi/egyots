@@ -68,7 +68,7 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
                   <MapPin className="text-primary shrink-0 mt-1" size={20} />
-                  <span className="text-muted text-sm">Alexandria Free Zone, Alexandria, Egypt</span>
+                  <span className="text-muted text-sm">2QJ9+5J3, Ekeingy Maryout, Amreya 1, Alexandria Governorate 524820</span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <Mail className="text-primary shrink-0" size={20} />
