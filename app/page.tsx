@@ -237,7 +237,7 @@ export default function HomePage() {
           </ScrollReveal>
           <div className="grid grid-cols-3 gap-8 mt-10 text-center">
             <div>
-              <div className="text-3xl font-headline font-bold" style={{ color: '#A7D09A' }}>10+</div>
+              <div className="text-3xl font-headline font-bold" style={{ color: '#A7D09A' }}>12</div>
               <div className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.6)' }}>Countries</div>
             </div>
             <div>
