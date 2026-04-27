@@ -3,16 +3,18 @@
 import { useEffect, useRef } from 'react'
 
 const locations = [
-  { name: 'Alexandria, Egypt', lat: 31.20, lon: 29.92, service: 'Manufacturing Facility', detail: 'Ekeingy Maryout, Amreya 1, Alexandria Governorate 524820' },
-  { name: 'Cairo, Egypt', lat: 30.04, lon: 31.24, service: 'Main Office & Manufacturing', detail: 'Completion tools, well testing packages, early production facilities' },
-  { name: 'Tripoli, Libya', lat: 32.89, lon: 13.18, service: 'Gas Processing Projects', detail: 'Gas separation units, line heaters, choke manifolds' },
-  { name: 'Riyadh, Saudi Arabia', lat: 24.69, lon: 46.72, service: 'Downhole Completion Tools', detail: 'Packers, bridge plugs, flow control equipment for major NOC projects' },
-  { name: 'Abu Dhabi, UAE', lat: 24.45, lon: 54.37, service: 'Well Testing Packages', detail: 'Surface well testing equipment, data acquisition systems, ESD systems' },
-  { name: 'Basra, Iraq', lat: 30.51, lon: 47.82, service: 'Early Production Facilities', detail: 'Modular production units, fast-track field development, integrated safety systems' },
-  { name: 'Muscat, Oman', lat: 23.61, lon: 58.59, service: 'Compression Systems', detail: 'Gas compression packages, power generation units, pipeline compression' },
-  { name: 'Tunis, Tunisia', lat: 36.82, lon: 10.16, service: 'Flow Control Equipment', detail: 'Sliding sleeves, subsurface safety valves, wellhead equipment' },
-  { name: 'Amman, Jordan', lat: 31.95, lon: 35.93, service: 'Flared Gas to Energy', detail: 'Gas capture units, power generation modules, emissions reduction systems' },
-  { name: 'Rio de Janeiro, Brazil', lat: -22.91, lon: -43.17, service: 'Artificial Lift Systems', detail: 'Jet pump systems, downhole hydraulic pumps, surface power units' },
+  { country: 'Egypt', lat: 30.04, lon: 31.24, categories: ['Well Testing', 'Artificial Lift', 'Downhole Completion'] },
+  { country: 'Libya', lat: 32.89, lon: 13.18, categories: ['Well Testing', 'Downhole Completion'] },
+  { country: 'Tunisia', lat: 36.82, lon: 10.16, categories: ['Well Testing', 'Artificial Lift', 'Downhole Completion'] },
+  { country: 'Algeria', lat: 36.75, lon: 3.06, categories: ['Well Testing'] },
+  { country: 'Nigeria', lat: 9.08, lon: 7.49, categories: ['Well Testing'] },
+  { country: 'Chad', lat: 12.13, lon: 15.05, categories: ['Well Testing'] },
+  { country: 'Saudi Arabia', lat: 24.69, lon: 46.72, categories: ['Well Testing'] },
+  { country: 'UAE', lat: 24.45, lon: 54.37, categories: ['Well Testing'] },
+  { country: 'Oman', lat: 23.61, lon: 58.59, categories: ['Well Testing', 'Artificial Lift'] },
+  { country: 'Syria', lat: 33.51, lon: 36.29, categories: ['Artificial Lift'] },
+  { country: 'Kazakhstan', lat: 51.16, lon: 71.47, categories: ['Well Testing'] },
+  { country: 'Poland', lat: 52.23, lon: 21.01, categories: ['Artificial Lift'] },
 ]
 
 function loadScript(src: string): Promise<void> {
@@ -100,11 +102,9 @@ export default function GlobalMap() {
             .style('cursor', 'pointer')
             .on('mouseenter', function (this: SVGCircleElement) {
               d3.select(this).transition().duration(150).attr('r', 7).attr('fill', '#3C6E4A')
-              const showDetail = loc.detail !== 'Project details coming soon'
               tt.innerHTML = `
-                <div style="font-weight:600;font-size:14px;color:#A7D09A;margin-bottom:4px">${loc.name}</div>
-                <div style="color:#ddd;font-size:12px">${loc.service}</div>
-                ${showDetail ? `<div style="color:#999;font-size:11px;margin-top:3px">${loc.detail}</div>` : ''}` 
+                <div style="font-weight:600;font-size:14px;color:#A7D09A;margin-bottom:4px">${loc.country}</div>
+                <div style="color:#ddd;font-size:12px">${loc.categories.join(' · ')}</div>`
               tt.style.opacity = '1'
             })
             .on('mousemove', function (event: MouseEvent) {
