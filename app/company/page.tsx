@@ -72,7 +72,7 @@ export default function CompanyPage() {
             </div>
             <h3 className="text-2xl font-headline font-bold mb-4 text-primary">Our Mission</h3>
             <p className="text-muted leading-relaxed">
-              To deliver exceptional engineering solutions and oilfield equipment that empower our clients to achieve their production goals safely, efficiently, and sustainably. We strive to be at the forefront of technical innovation in the energy industry.
+              To deliver innovative, reliable, and cost-effective solutions that maximize our clients&apos; operational efficiency and production performance. We are committed to maintaining the highest standards of quality, safety, and environmental responsibility in everything we do.
             </p>
           </ScrollReveal>
           <ScrollReveal direction="left" className="bg-white p-10 rounded-xl border-2 border-primary/15 shadow-sm">
@@ -81,7 +81,7 @@ export default function CompanyPage() {
             </div>
             <h3 className="text-2xl font-headline font-bold mb-4 text-primary">Our Vision</h3>
             <p className="text-muted leading-relaxed">
-              To be the global leader in energy engineering services, recognized for our technical excellence, operational integrity, and commitment to driving the future of energy through innovation and sustainable practices.
+              To be the leading provider of oil and gas equipment and services in the region, recognized for our technical excellence, innovative solutions, and unwavering commitment to customer success. We strive to set new standards in quality and reliability while fostering local talent and expertise.
             </p>
           </ScrollReveal>
         </div>
