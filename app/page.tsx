@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from 'next/link';
-import { CheckCircle, Settings, Flame, Globe, Gauge, Factory, Wrench, Zap, ArrowRight } from 'lucide-react';
+import { CheckCircle, Settings, Flame, Globe, Gauge, Factory, Wrench, Zap, ArrowRight, ShieldCheck } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 import ImageWithFallback from '@/components/figma/ImageWithFallback'
 import GlobalMap from '@/components/GlobalMap'
@@ -270,6 +270,10 @@ export default function HomePage() {
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Download Brochure
               </a>
+              <Link href="/company#certifications" className="btn-outline btn-lg flex items-center gap-2">
+                <ShieldCheck size={18} />
+                View Certificates
+              </Link>
             </div>
           </ScrollReveal>
         </div>

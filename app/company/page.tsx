@@ -114,7 +114,7 @@ export default function CompanyPage() {
       </section>
 
       {/* Certifications */}
-      <section className="bg-[#fafaf8] py-20">
+      <section id="certifications" className="bg-[#fafaf8] py-20 scroll-mt-20">
         <div className="section-container py-0">
           <ScrollReveal className="text-center mb-12">
             <span className="section-tag mx-auto">Compliance</span>
