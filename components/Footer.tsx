@@ -11,7 +11,7 @@ export default function Footer() {
             <Image src="/logo-light.png" alt="EGYOTS Logo" fill style={{ objectFit: 'contain', objectPosition: 'left' }} />
           </div>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Engineering and manufacturing innovative solutions for the oil, gas, and renewable energy sectors since 2002.
+            Engineering and manufacturing innovative solutions for the oil, gas, and renewable energy sectors since 2003.
           </p>
         </div>
         <div>

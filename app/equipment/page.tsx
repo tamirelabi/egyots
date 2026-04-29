@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function EquipmentPage() {
   const completionEquipment = [
     {
-      name: "Packers",
+      name: "Retrievable and Permanent Packers",
       img: "https://images.unsplash.com/photo-1597000042706-881cba236e33?w=500&q=80&fit=crop",
       tag: "Completion",
       desc: "High-performance production packers for reliable zone isolation.",
@@ -33,7 +33,7 @@ export default function EquipmentPage() {
       ]
     },
     {
-      name: "Flow Control Tools",
+      name: "Flow Control Equipment",
       img: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=500&q=80&fit=crop",
       tag: "Completion",
       desc: "Precision tools for managing pressure and flow downhole.",

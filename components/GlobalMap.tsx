@@ -13,6 +13,7 @@ const locations = [
   { country: 'UAE', lat: 24.45, lon: 54.37, categories: ['Well Testing'] },
   { country: 'Oman', lat: 23.61, lon: 58.59, categories: ['Well Testing', 'Artificial Lift'] },
   { country: 'Syria', lat: 33.51, lon: 36.29, categories: ['Artificial Lift'] },
+  { country: 'Turkey', lat: 39.92, lon: 32.85, categories: ['Well Testing'] },
   { country: 'Kazakhstan', lat: 51.16, lon: 71.47, categories: ['Well Testing'] },
   { country: 'Poland', lat: 52.23, lon: 21.01, categories: ['Artificial Lift'] },
 ]

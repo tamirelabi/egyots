@@ -11,7 +11,7 @@ const poppins = Poppins({ subsets: ['latin'], weight: ['300','400','500'], varia
 export const metadata: Metadata = {
   metadataBase: new URL('https://egyots.vercel.app'),
   title: { default: 'EGYOTS | Oil & Gas Engineering Solutions', template: '%s | EGYOTS' },
-  description: 'Engineering and manufacturing innovative solutions for the oil, gas, and renewable energy sectors since 2002.',
+  description: 'Engineering and manufacturing innovative solutions for the oil, gas, and renewable energy sectors since 2003.',
   openGraph: { siteName: 'EGYOTS - Egypt Oil Tools & Services', type: 'website', locale: 'en_US' },
 }
 

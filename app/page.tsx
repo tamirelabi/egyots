@@ -7,7 +7,7 @@ import GlobalMap from '@/components/GlobalMap'
 import ClientLogosStrip from '@/components/ClientLogosStrip';
 
 export const metadata: Metadata = {
-  title: "Oil & Gas Engineering Solutions Since 2002",
+  title: "Oil & Gas Engineering Solutions Since 2003",
   description: "EGYOTS delivers innovative engineering and manufacturing solutions for oil, gas, and renewable energy sectors. Well testing, gas processing, completion tools and more.",
 };
 
@@ -28,7 +28,7 @@ export default function HomePage() {
         <div className="section-container relative z-10 text-white">
           <ScrollReveal direction="right">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold mb-6 max-w-[700px] leading-[1.1]" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.5)' }}>
-              Delivering Oil & Gas Engineering Solutions Since 2002
+              Delivering Oil & Gas Engineering Solutions Since 2003
             </h1>
             <p className="font-subheading text-xl md:text-2xl text-white mb-10 max-w-[600px]" style={{ textShadow: '0 1px 8px rgba(0,0,0,0.5)' }}>
               Engineering and manufacturing innovative solutions for the oil, gas, and renewable energy sectors.
@@ -210,7 +210,7 @@ export default function HomePage() {
               </div>
               <div className="bg-white/12 p-6 rounded-xl">
                 <h4 className="text-3xl font-headline font-bold mb-1">50+</h4>
-                <p className="text-white/60 text-sm">Industry Partners</p>
+                <p className="text-white/60 text-sm">Customers</p>
               </div>
             </div>
           </ScrollReveal>
@@ -237,7 +237,7 @@ export default function HomePage() {
           </ScrollReveal>
           <div className="grid grid-cols-3 gap-8 mt-10 text-center">
             <div>
-              <div className="text-3xl font-headline font-bold" style={{ color: '#A7D09A' }}>12</div>
+              <div className="text-3xl font-headline font-bold" style={{ color: '#A7D09A' }}>13</div>
               <div className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.6)' }}>Countries</div>
             </div>
             <div>

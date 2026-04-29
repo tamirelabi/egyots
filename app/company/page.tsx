@@ -9,7 +9,7 @@ import ClientLogosStrip from '@/components/ClientLogosStrip';
 
 export const metadata: Metadata = {
   title: "Company | EGYOTS - Egypt Oil Tools & Services",
-  description: "Leading the energy industry with innovative engineering solutions since 2002.",
+  description: "Leading the energy industry with innovative engineering solutions since 2003.",
 };
 
 export default function CompanyPage() {
@@ -29,7 +29,7 @@ export default function CompanyPage() {
           <ScrollReveal>
             <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4">About EGYOTS</h1>
             <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              Leading the energy industry with innovative engineering solutions since 2002
+              Leading the energy industry with innovative engineering solutions since 2003
             </p>
           </ScrollReveal>
         </div>
@@ -42,7 +42,7 @@ export default function CompanyPage() {
           <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6">A Legacy of Innovation</h2>
           <div className="space-y-4 text-muted leading-relaxed">
             <p>
-              Founded in 2002, EGYOTS (Egypt Oil Tools & Services) began with a clear vision: to provide the oil and gas industry with superior engineering solutions and high-performance tools that enhance operational efficiency.
+              Founded in 2003, EGYOTS (Egypt Oil Tools & Services) began with a clear vision: to provide the oil and gas industry with superior engineering solutions and high-performance tools that enhance operational efficiency.
             </p>
             <p>
               Over the years, we have grown from a local service provider into a significant regional player, expanding our reach across the Middle East, North Africa, and North America. Our growth has been fueled by our unwavering commitment to quality and our ability to adapt to the evolving needs of the energy sector.
@@ -148,7 +148,7 @@ export default function CompanyPage() {
           </ScrollReveal>
           <div className="grid grid-cols-3 gap-8 mt-10 text-center">
             <div>
-              <div className="text-3xl font-headline font-bold" style={{ color: '#A7D09A' }}>12</div>
+              <div className="text-3xl font-headline font-bold" style={{ color: '#A7D09A' }}>13</div>
               <div className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.6)' }}>Countries</div>
             </div>
             <div>
