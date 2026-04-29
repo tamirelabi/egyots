@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Target, Eye, Award, Lightbulb, Shield, Play } from 'lucide-react';
+import { Target, Eye, Award, Lightbulb, Shield, Play, ExternalLink } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 import ImageWithFallback from '@/components/figma/ImageWithFallback';
 import Link from 'next/link'
@@ -88,6 +88,50 @@ export default function CompanyPage() {
       </section>
 
       <ClientLogosStrip />
+
+      {/* Partners */}
+      <section className="section-container">
+        <ScrollReveal className="text-center mb-16">
+          <span className="section-tag mx-auto">Strategic Alliances</span>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">Our Partners</h2>
+        </ScrollReveal>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {[
+            {
+              name: 'ARC Energy',
+              services: 'Well Testing · EPF · Flared Gas to Power · Compression',
+              website: 'https://www.arcenergy.com',
+              logo: '/partners/partner-arc-energy.png',
+            },
+            {
+              name: 'SilverFox',
+              services: 'Downhole Completion',
+              website: 'https://silver-fox.net',
+              logo: '/partners/partner-silverfox.svg',
+            },
+          ].map((partner, i) => (
+            <ScrollReveal key={partner.name} direction={i === 0 ? 'right' : 'left'} className="card-base overflow-hidden flex flex-col">
+              <div className="h-[180px] bg-white flex items-center justify-center p-8 border-b border-black/5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={partner.logo} alt={`${partner.name} logo`} className="max-h-full max-w-full object-contain" />
+              </div>
+              <div className="p-8 flex flex-col flex-grow">
+                <h3 className="text-xl font-headline font-bold mb-2">{partner.name}</h3>
+                <p className="text-primary font-medium text-sm mb-6">{partner.services}</p>
+                <a
+                  href={partner.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline inline-flex items-center gap-2 text-sm py-2.5 mt-auto self-start"
+                >
+                  <ExternalLink size={16} />
+                  Visit Website
+                </a>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
 
       {/* Core Values */}
       <section className="section-container text-center">
