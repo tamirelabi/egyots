@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(git -C /Users/tamirelabi/egyots add app/company/page.tsx)",
-      "Bash(git -C /Users/tamirelabi/egyots commit -m ' *)"
-    ]
-  }
-}
