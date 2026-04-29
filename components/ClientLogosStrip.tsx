@@ -33,6 +33,8 @@ const clients = [
   { name: 'Expro', file: '/clients/client-expro.png' },
   { name: 'Pico Energy', file: '/clients/client-pico-energy.png' },
   { name: 'Ankor Pointe', file: '/clients/client-ankor-pointe.png' },
+  { name: 'Turkey Petroleum Oil', file: '/clients/client-turkey-petroleum-oil.png' },
+  { name: 'PetroGas', file: '/clients/client-petrogas.png' },
 ]
 
 export default function ClientLogosStrip() {
