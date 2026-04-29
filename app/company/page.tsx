@@ -90,12 +90,13 @@ export default function CompanyPage() {
       <ClientLogosStrip />
 
       {/* Partners */}
-      <section className="section-container">
-        <ScrollReveal className="text-center mb-16">
-          <span className="section-tag mx-auto">Strategic Alliances</span>
-          <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">Our Partners</h2>
-        </ScrollReveal>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <section className="bg-[#fafaf8] py-20">
+        <div className="section-container py-0">
+          <ScrollReveal className="text-center mb-16">
+            <span className="section-tag mx-auto">Strategic Alliances</span>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">Our Partners</h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {[
             {
               name: 'ARC Energy',
@@ -130,6 +131,7 @@ export default function CompanyPage() {
               </div>
             </ScrollReveal>
           ))}
+          </div>
         </div>
       </section>
 
