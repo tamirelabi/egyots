@@ -89,23 +89,33 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
           <span className="section-tag">Tools &amp; Hardware</span>
           <h2 className="text-3xl md:text-4xl font-headline font-bold">Related Equipment</h2>
         </ScrollReveal>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {service.equipment.map((item, i) => (
-            <ScrollReveal
-              key={item}
-              delay={i * 0.05}
-              className="card-base p-6 flex items-center gap-4"
-            >
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                <Wrench size={18} />
-              </div>
-              <span className="font-headline font-medium text-foreground">{item}</span>
-            </ScrollReveal>
-          ))}
-        </div>
-        <p className="font-body text-muted text-sm mt-8 italic">
-          Equipment listings are illustrative — contact our team for full specifications and configurations.
-        </p>
+        {service.equipment.length === 0 ? (
+          <ScrollReveal className="card-base p-8">
+            <p className="font-body text-muted leading-relaxed">
+              Equipment list pending client confirmation. Contact our team for current capabilities.
+            </p>
+          </ScrollReveal>
+        ) : (
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {service.equipment.map((item, i) => (
+                <ScrollReveal
+                  key={item}
+                  delay={i * 0.05}
+                  className="card-base p-6 flex items-center gap-4"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                    <Wrench size={18} />
+                  </div>
+                  <span className="font-headline font-medium text-foreground">{item}</span>
+                </ScrollReveal>
+              ))}
+            </div>
+            <p className="font-body text-muted text-sm mt-8 italic">
+              Equipment listings are illustrative — contact our team for full specifications and configurations.
+            </p>
+          </>
+        )}
       </section>
 
       {/* CTA */}

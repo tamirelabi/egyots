@@ -39,11 +39,18 @@ export const services: Service[] = [
       'Compliance with API and ASME standards',
     ],
     equipment: [
-      'Test Separators',
-      'Multiphase Flow Meters',
-      'Data Acquisition Systems',
-      'Emergency Shutdown (ESD) Systems',
-      'Burner Booms',
+      'Three Phase Separator',
+      'Inlet Manifolds',
+      'Indirect Heaters',
+      'Surge Vessels',
+      'Gas Conditioning Units',
+      'Choke Manifolds',
+      'Line Heaters',
+      'Well Test Packages 5K PSI',
+      'Well Test Packages 10K PSI',
+      'Testing Mobile Unit (TMU)',
+      'Fuel Gas Skid',
+      'Sand Filters',
     ],
   },
   {
@@ -61,10 +68,16 @@ export const services: Service[] = [
       'Field-proven reliability',
     ],
     equipment: [
-      'Production Packers',
+      'Retrievable and Permanent Packers',
       'Bridge Plugs',
-      'Sliding Sleeves',
-      'Flow Control Accessories',
+      'Flow Control Equipment',
+      'Landing Nipples',
+      'Sliding Sleeve Door',
+      'Completion Packer',
+      'Anchor Catcher',
+      'Downhole Flow Control Equipment',
+      'Vent Valves',
+      'X-Overs',
       'Check Valves',
     ],
   },
@@ -83,11 +96,8 @@ export const services: Service[] = [
       'Designed for long service intervals',
     ],
     equipment: [
-      'Jet Pumps',
-      'Downhole Hydraulic Pumps',
-      'Surface Power Units',
-      'High-Pressure Piping',
-      'Integrated Control Systems',
+      'Jet Pump Surface Packages',
+      'Downhole Jet Pump',
     ],
   },
   {
@@ -105,11 +115,18 @@ export const services: Service[] = [
       'Remote monitoring capability',
     ],
     equipment: [
-      'Modular Process Units',
+      'Three Phase Separator',
+      'Fuel Gas Skid',
       'Inlet Manifolds',
-      'Production Separators',
-      'Storage Tanks',
-      'Metering Skids',
+      'Indirect Heaters',
+      'Surge Vessels',
+      'Gas Conditioning Units',
+      'Sand Filters',
+      'Coolers',
+      'Transfer Pumps',
+      'Choke Manifolds',
+      'Line Heaters',
+      'Compressors',
     ],
   },
   {
@@ -127,11 +144,15 @@ export const services: Service[] = [
       'Custom-engineered to feed composition',
     ],
     equipment: [
-      'Glycol Dehydration Units',
-      'Amine Contactors',
-      'Filter Separators',
-      'Heat Exchangers',
-      'Reboilers',
+      'Three Phase Separator',
+      'Gas Conditioning Units',
+      'Sand Filters',
+      'Coolers',
+      'Indirect Heaters',
+      'Fuel Gas Skid',
+      'Choke Manifolds',
+      'Compressors',
+      'Line Heaters',
     ],
   },
   {
@@ -149,11 +170,10 @@ export const services: Service[] = [
       'Remote control and monitoring',
     ],
     equipment: [
-      'Reciprocating Compressors',
-      'Screw Compressors',
-      'Gas Coolers',
-      'Inlet Scrubbers',
-      'Control & Instrumentation Panels',
+      'Compressors',
+      'Coolers',
+      'Fuel Gas Skid',
+      'Gas Conditioning Units',
     ],
   },
   {
@@ -171,11 +191,11 @@ export const services: Service[] = [
       'Tied to local power needs or microgrid',
     ],
     equipment: [
-      'Gas Capture Units',
-      'Power Generation Modules',
-      'Emissions Reduction Systems',
-      'Energy Recovery Systems',
-      'Control Panels',
+      'Compressors',
+      'Gas Conditioning Units',
+      'Fuel Gas Skid',
+      'Coolers',
+      'Transfer Pumps',
     ],
   },
   {
@@ -193,11 +213,8 @@ export const services: Service[] = [
       'Tied to downhole pump systems',
     ],
     equipment: [
-      'Triplex Pumps',
-      'Quintuplex Pumps',
-      'Power Fluid Tanks',
-      'Drive Skids',
-      'Control Cabinets',
+      'Jet Pump Surface Packages',
+      'Transfer Pumps',
     ],
   },
   {
@@ -215,11 +232,7 @@ export const services: Service[] = [
       'Compatible with standard tubing strings',
     ],
     equipment: [
-      'Jet Pump Assemblies',
-      'Throat & Nozzle Sets',
-      'Bottom Hole Assemblies',
-      'Standing Valves',
-      'Retrieval Tools',
+      'Downhole Jet Pump',
     ],
   },
   {
@@ -237,11 +250,9 @@ export const services: Service[] = [
       'Historian and reporting tools',
     ],
     equipment: [
-      'Surface Sensors',
-      'Downhole Gauges',
-      'Data Loggers',
-      'Telemetry Modules',
-      'Analysis Software',
+      'Well Test Packages 5K PSI',
+      'Well Test Packages 10K PSI',
+      'Testing Mobile Unit (TMU)',
     ],
   },
   {
@@ -258,16 +269,14 @@ export const services: Service[] = [
       'Field-portable equipment',
       'On-site reporting and recommendations',
     ],
-    equipment: [
-      'Acoustic Gun Assemblies',
-      'Surface Load Cells',
-      'Position Transducers',
-      'Field Laptops',
-      'Reporting Software',
-    ],
+    equipment: [],
   },
 ]
 
 export function getService(slug: string): Service | undefined {
   return services.find((s) => s.slug === slug)
+}
+
+export function getServicesUsingEquipment(equipmentName: string): Service[] {
+  return services.filter((s) => s.equipment.includes(equipmentName))
 }
