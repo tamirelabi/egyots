@@ -1,6 +1,23 @@
+import type { LucideIcon } from 'lucide-react'
+import {
+  Gauge,
+  Wrench,
+  Droplets,
+  Factory,
+  Flame,
+  Settings,
+  Zap,
+  Cog,
+  Droplet,
+  Activity,
+  LineChart,
+} from 'lucide-react'
+
 export type Service = {
   slug: string
   name: string
+  icon: LucideIcon
+  shortDescription: string
   description: string
   features: string[]
   equipment: string[]
@@ -10,6 +27,8 @@ export const services: Service[] = [
   {
     slug: 'well-testing-packages',
     name: 'Well Testing Packages',
+    icon: Gauge,
+    shortDescription: 'Advanced surface well testing equipment for accurate data acquisition.',
     description:
       'Complete surface well testing equipment packages for accurate reservoir evaluation and data acquisition. Designed for safe, reliable operation in demanding field conditions.',
     features: [
@@ -30,6 +49,8 @@ export const services: Service[] = [
   {
     slug: 'downhole-completion',
     name: 'Downhole Completion',
+    icon: Wrench,
+    shortDescription: 'Reliable downhole completion tools including packers, bridge plugs, and flow control accessories.',
     description:
       'High-performance downhole tools for reliable well completion and intervention operations across a wide range of environments.',
     features: [
@@ -50,6 +71,8 @@ export const services: Service[] = [
   {
     slug: 'artificial-lift-pump-systems',
     name: 'Artificial Lift & Pump Systems',
+    icon: Droplets,
+    shortDescription: 'Integrated artificial lift solutions including jet pumps, hydraulic units, and surface power systems.',
     description:
       'Integrated artificial lift solutions including jet pumps, hydraulic units, and surface power systems engineered to optimize production rates across a wide range of well conditions.',
     features: [
@@ -70,6 +93,8 @@ export const services: Service[] = [
   {
     slug: 'early-production-facilities',
     name: 'Early Production Facilities',
+    icon: Factory,
+    shortDescription: 'Modular production systems for fast-track field development.',
     description:
       'Fast-track modular production facilities designed for rapid field development and early cash flow. Pre-engineered packages reduce time from discovery to production.',
     features: [
@@ -90,6 +115,8 @@ export const services: Service[] = [
   {
     slug: 'gas-processing',
     name: 'Gas Processing',
+    icon: Flame,
+    shortDescription: 'Integrated solutions for gas treatment, dehydration, and sweetening.',
     description:
       'Integrated solutions for gas treatment, dehydration, and sweetening designed to meet pipeline specifications and downstream processing requirements.',
     features: [
@@ -110,6 +137,8 @@ export const services: Service[] = [
   {
     slug: 'compression-systems',
     name: 'Compression Systems',
+    icon: Settings,
+    shortDescription: 'High-performance gas compression packages for various applications.',
     description:
       'High-performance gas compression packages for gathering, gas-lift, and pipeline applications. Engineered around reciprocating and screw compressor platforms.',
     features: [
@@ -130,6 +159,8 @@ export const services: Service[] = [
   {
     slug: 'flared-gas-to-energy',
     name: 'Flared Gas to Energy',
+    icon: Zap,
+    shortDescription: 'Innovative systems to capture flared gas and convert it into usable power.',
     description:
       'Sustainable solutions for capturing flared associated gas and converting it into usable electrical or thermal energy, reducing emissions and creating site value.',
     features: [
@@ -150,6 +181,8 @@ export const services: Service[] = [
   {
     slug: 'surface-pumping-system',
     name: 'Surface Pumping System',
+    icon: Cog,
+    shortDescription: 'High-pressure surface power units engineered for hydraulic and jet pump operations.',
     description:
       'High-pressure surface power units engineered to drive hydraulic and jet pump operations. Robust, transportable, and designed for continuous duty.',
     features: [
@@ -170,6 +203,8 @@ export const services: Service[] = [
   {
     slug: 'downhole-jet-pump-system',
     name: 'Downhole Jet Pump System',
+    icon: Droplet,
+    shortDescription: 'Hydraulic jet pump assemblies for efficient artificial lift in challenging well conditions.',
     description:
       'Hydraulic jet pump assemblies for efficient artificial lift in challenging well conditions. No moving downhole parts; suitable for deviated and high-temperature wells.',
     features: [
@@ -190,6 +225,8 @@ export const services: Service[] = [
   {
     slug: 'well-performance-measurement-system',
     name: 'Well Performance Measurement System',
+    icon: Activity,
+    shortDescription: 'Real-time data acquisition and analysis for production optimization and reservoir insight.',
     description:
       'Real-time data acquisition and analysis platform for production optimization and reservoir insight. Combines surface and downhole measurements into unified diagnostics.',
     features: [
@@ -210,6 +247,8 @@ export const services: Service[] = [
   {
     slug: 'fluid-level-dynamometer-test',
     name: 'Fluid Level & Dynamometer Test',
+    icon: LineChart,
+    shortDescription: 'Diagnostic tools for measuring fluid levels and rod-load behavior in pumping wells.',
     description:
       'Diagnostic services for measuring fluid levels and rod-load behavior in pumping wells, supporting production optimization and equipment troubleshooting.',
     features: [

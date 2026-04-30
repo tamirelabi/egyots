@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from 'next/link';
-import { CheckCircle, Settings, Flame, Globe, Gauge, Factory, Wrench, Zap, ArrowRight, ShieldCheck, Droplets, Droplet, Cog, Activity, LineChart } from 'lucide-react';
+import { CheckCircle, Settings, Flame, Globe, Gauge, Factory, Wrench, Zap, ArrowRight, ShieldCheck } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 import ImageWithFallback from '@/components/figma/ImageWithFallback'
 import GlobalMap from '@/components/GlobalMap'
 import ClientLogosStrip from '@/components/ClientLogosStrip';
+import { services } from '@/lib/services';
 
 export const metadata: Metadata = {
   title: "Oil & Gas Engineering Solutions Since 2003",
@@ -108,25 +109,13 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { icon: Gauge, title: "Well Testing Packages", slug: "well-testing-packages", desc: "Advanced surface well testing equipment for accurate data acquisition." },
-              { icon: Wrench, title: "Downhole Completion", slug: "downhole-completion", desc: "Reliable downhole completion tools including packers, bridge plugs, and flow control accessories." },
-              { icon: Droplets, title: "Artificial Lift & Pump Systems", slug: "artificial-lift-pump-systems", desc: "Integrated artificial lift solutions including jet pumps, hydraulic units, and surface power systems." },
-              { icon: Factory, title: "Early Production Facilities", slug: "early-production-facilities", desc: "Modular production systems for fast-track field development." },
-              { icon: Flame, title: "Gas Processing", slug: "gas-processing", desc: "Integrated solutions for gas treatment, dehydration, and sweetening." },
-              { icon: Settings, title: "Compression Systems", slug: "compression-systems", desc: "High-performance gas compression packages for various applications." },
-              { icon: Zap, title: "Flared Gas to Energy", slug: "flared-gas-to-energy", desc: "Innovative systems to capture flared gas and convert it into usable power." },
-              { icon: Cog, title: "Surface Pumping System", slug: "surface-pumping-system", desc: "High-pressure surface power units engineered for hydraulic and jet pump operations." },
-              { icon: Droplet, title: "Downhole Jet Pump System", slug: "downhole-jet-pump-system", desc: "Hydraulic jet pump assemblies for efficient artificial lift in challenging well conditions." },
-              { icon: Activity, title: "Well Performance Measurement System", slug: "well-performance-measurement-system", desc: "Real-time data acquisition and analysis for production optimization and reservoir insight." },
-              { icon: LineChart, title: "Fluid Level & Dynamometer Test", slug: "fluid-level-dynamometer-test", desc: "Diagnostic tools for measuring fluid levels and rod-load behavior in pumping wells." },
-            ].map((service, i) => (
+            {services.map((service, i) => (
               <ScrollReveal key={service.slug} delay={i * 0.1} className="card-base p-8 flex flex-col items-start">
                 <div className="w-[52px] h-[52px] rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
                   <service.icon size={28} />
                 </div>
-                <h3 className="text-xl font-headline font-bold mb-3">{service.title}</h3>
-                <p className="text-muted text-sm mb-6 flex-grow">{service.desc}</p>
+                <h3 className="text-xl font-headline font-bold mb-3">{service.name}</h3>
+                <p className="font-body text-muted text-sm mb-6 flex-grow">{service.shortDescription}</p>
                 <Link href={`/services/${service.slug}`} className="text-primary font-medium flex items-center group">
                   Learn more <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
                 </Link>
