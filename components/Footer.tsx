@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Mail, Phone, Printer, MapPin, Linkedin, Facebook, Twitter } from 'lucide-react'
+import { Mail, Phone, Printer, MapPin } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
         <div>
           <h4 className="text-secondary font-headline font-semibold mb-6">Get in Touch</h4>
-          <div className="space-y-4 mb-6">
+          <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <Mail size={18} className="text-secondary" />
               <a href="mailto:info@egyptoiltools.com" className="text-gray-400 hover:text-white transition-colors text-sm">info@egyptoiltools.com</a>
@@ -58,11 +58,6 @@ export default function Footer() {
               <Printer size={18} className="text-secondary" />
               <span className="text-gray-400 text-sm">+(202) 275 139 52</span>
             </div>
-          </div>
-          <div className="flex space-x-4">
-            <a href="#" className="w-9 h-9 border border-gray-700 rounded-md flex items-center justify-center hover:bg-primary hover:border-primary transition-all"><Linkedin size={18} /></a>
-            <a href="#" className="w-9 h-9 border border-gray-700 rounded-md flex items-center justify-center hover:bg-primary hover:border-primary transition-all"><Facebook size={18} /></a>
-            <a href="#" className="w-9 h-9 border border-gray-700 rounded-md flex items-center justify-center hover:bg-primary hover:border-primary transition-all"><Twitter size={18} /></a>
           </div>
         </div>
       </div>

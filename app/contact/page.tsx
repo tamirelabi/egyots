@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Phone, Printer, MapPin, Linkedin, Facebook, Twitter } from 'lucide-react';
+import { Mail, Phone, Printer, MapPin } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 import ImageWithFallback from '@/components/figma/ImageWithFallback';
 import ContactForm from '@/components/ContactForm';
@@ -83,21 +83,10 @@ export default function ContactPage() {
           </ScrollReveal>
 
           <ScrollReveal direction="left" delay={0.3}>
-            <div className="bg-white border border-black/8 rounded-[10px] p-8 space-y-6">
-              <h3 className="text-xl font-headline font-bold text-primary">Connect With Us</h3>
-              <div className="flex space-x-4 mb-6">
-                <a href="#" className="w-9 h-9 border border-black/10 rounded-md flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all">
-                  <Linkedin size={18} />
-                </a>
-                <a href="#" className="w-9 h-9 border border-black/10 rounded-md flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all">
-                  <Facebook size={18} />
-                </a>
-                <a href="#" className="w-9 h-9 border border-black/10 rounded-md flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all">
-                  <Twitter size={18} />
-                </a>
-              </div>
-              <p className="text-xs text-muted leading-relaxed">
-                Business hours: Sun–Thu, 8:00 AM – 5:00 PM (Cairo Time)
+            <div className="bg-white border border-black/8 rounded-[10px] p-8 space-y-4">
+              <h3 className="text-xl font-headline font-bold text-primary">Business Hours</h3>
+              <p className="font-body text-muted text-sm leading-relaxed">
+                Sun–Thu, 8:00 AM – 5:00 PM (Cairo Time)
               </p>
             </div>
           </ScrollReveal>
