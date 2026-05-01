@@ -48,11 +48,11 @@ export default function Footer() {
           <div className="space-y-4 mb-6">
             <div className="flex items-center space-x-3">
               <Mail size={18} className="text-secondary" />
-              <span className="text-gray-400 text-sm">info@egyptoiltools.com</span>
+              <a href="mailto:info@egyptoiltools.com" className="text-gray-400 hover:text-white transition-colors text-sm">info@egyptoiltools.com</a>
             </div>
             <div className="flex items-center space-x-3">
               <Phone size={18} className="text-secondary" />
-              <span className="text-gray-400 text-sm">+0201223120459</span>
+              <a href="tel:+201223120459" className="text-gray-400 hover:text-white transition-colors text-sm">+0201223120459</a>
             </div>
             <div className="flex items-center space-x-3">
               <Printer size={18} className="text-secondary" />

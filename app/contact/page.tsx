@@ -52,7 +52,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center space-x-4">
                   <Phone className="text-primary shrink-0" size={20} />
-                  <span className="text-muted text-sm">+0201223120459</span>
+                  <a href="tel:+201223120459" className="text-muted hover:text-primary transition-colors text-sm">+0201223120459</a>
                 </div>
                 <div className="flex items-center space-x-4">
                   <Printer className="text-primary shrink-0" size={20} />
@@ -60,7 +60,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center space-x-4">
                   <Mail className="text-primary shrink-0" size={20} />
-                  <span className="text-muted text-sm">info@egyptoiltools.com</span>
+                  <a href="mailto:info@egyptoiltools.com" className="text-muted hover:text-primary transition-colors text-sm">info@egyptoiltools.com</a>
                 </div>
               </div>
             </div>
@@ -76,7 +76,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center space-x-4">
                   <Mail className="text-primary shrink-0" size={20} />
-                  <span className="text-muted text-sm">info@egyptoiltools.com</span>
+                  <a href="mailto:info@egyptoiltools.com" className="text-muted hover:text-primary transition-colors text-sm">info@egyptoiltools.com</a>
                 </div>
               </div>
             </div>
