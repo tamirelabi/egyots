@@ -126,7 +126,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
               Ready to discuss {service.name}?
             </h2>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="btn-primary btn-lg">Get in Touch</Link>
+              <Link href={`/contact?service=${service.slug}`} className="btn-primary btn-lg">Get in Touch</Link>
               <Link href="/services" className="btn-outline btn-lg">View All Services</Link>
             </div>
           </ScrollReveal>

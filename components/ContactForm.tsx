@@ -1,6 +1,13 @@
 'use client'
 
-export default function ContactForm() {
+import { services } from '@/lib/services'
+
+const VALID_SLUGS = new Set(services.map((s) => s.slug))
+
+export default function ContactForm({ initialService }: { initialService?: string }) {
+  const defaultInterest =
+    initialService && VALID_SLUGS.has(initialService) ? initialService : 'general'
+
   return (
     <form action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST" className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -25,16 +32,11 @@ export default function ContactForm() {
       </div>
       <div className="space-y-2">
         <label htmlFor="interest" className="text-sm font-medium text-foreground">Service Interest</label>
-        <select id="interest" name="interest" className="w-full px-4 py-3 bg-white border border-black/10 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
-          <option value="">Select a service</option>
-          <option value="downhole">Downhole Completion Tools</option>
-          <option value="well-testing">Well Testing Packages</option>
-          <option value="production">Early Production Facilities</option>
-          <option value="gas">Gas Processing</option>
-          <option value="compression">Compression Systems</option>
-          <option value="flared">Flared Gas to Energy</option>
-          <option value="purchase">Equipment Purchase</option>
+        <select id="interest" name="interest" defaultValue={defaultInterest} className="w-full px-4 py-3 bg-white border border-black/10 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
           <option value="general">General Inquiry</option>
+          {services.map((s) => (
+            <option key={s.slug} value={s.slug}>{s.name}</option>
+          ))}
         </select>
       </div>
       <div className="space-y-2">

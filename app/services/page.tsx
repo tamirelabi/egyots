@@ -60,7 +60,7 @@ export default function ServicesPage() {
                 <Link href={`/services/${service.slug}`} className="btn-primary w-full">
                   Learn More
                 </Link>
-                <Link href="/contact" className="btn-outline w-full">
+                <Link href={`/contact?service=${service.slug}`} className="btn-outline w-full">
                   Request Information
                 </Link>
               </div>

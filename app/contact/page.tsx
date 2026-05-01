@@ -9,7 +9,13 @@ export const metadata: Metadata = {
   description: "Get in touch with EGYOTS engineering and sales teams. Head office in Cairo, Egypt. Manufacturing facility in Alexandria, Egypt.",
 };
 
-export default function ContactPage() {
+export default function ContactPage({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined }
+}) {
+  const serviceParam = typeof searchParams.service === 'string' ? searchParams.service : undefined
+
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
@@ -36,7 +42,7 @@ export default function ContactPage() {
           <ScrollReveal direction="right">
             <span className="section-tag">Send Us a Message</span>
             <h2 className="text-3xl font-headline font-bold mb-8">Let&apos;s Discuss Your Project</h2>
-            <ContactForm />
+            <ContactForm initialService={serviceParam} />
           </ScrollReveal>
         </div>
 
