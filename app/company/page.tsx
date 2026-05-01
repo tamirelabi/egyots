@@ -226,7 +226,7 @@ export default function CompanyPage() {
             <div className="p-8">
               <h3 className="text-xl font-headline font-bold mb-2">Cairo, Egypt</h3>
               <p className="text-primary font-medium text-sm mb-4">Main Office &amp; Manufacturing</p>
-              <p className="text-muted text-sm">Industrial Zone, Cairo, Egypt</p>
+              <p className="text-muted text-sm">262 st. Building 9- New Maadi, Cairo-Egypt</p>
             </div>
           </ScrollReveal>
           <ScrollReveal direction="left" className="card-base overflow-hidden">

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Mail, Phone, MapPin, Linkedin, Facebook, Twitter } from 'lucide-react'
+import { Mail, Phone, Printer, MapPin, Linkedin, Facebook, Twitter } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -48,11 +48,15 @@ export default function Footer() {
           <div className="space-y-4 mb-6">
             <div className="flex items-center space-x-3">
               <Mail size={18} className="text-secondary" />
-              <span className="text-gray-400 text-sm">sales@egyots.com</span>
+              <span className="text-gray-400 text-sm">info@egyptoiltools.com</span>
             </div>
             <div className="flex items-center space-x-3">
               <Phone size={18} className="text-secondary" />
-              <span className="text-gray-400 text-sm">+20 123 456 789</span>
+              <span className="text-gray-400 text-sm">+0201223120459</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <Printer size={18} className="text-secondary" />
+              <span className="text-gray-400 text-sm">+(202) 275 139 52</span>
             </div>
           </div>
           <div className="flex space-x-4">

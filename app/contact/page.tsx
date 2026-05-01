@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Phone, MapPin, Linkedin, Facebook, Twitter } from 'lucide-react';
+import { Mail, Phone, Printer, MapPin, Linkedin, Facebook, Twitter } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 import ImageWithFallback from '@/components/figma/ImageWithFallback';
 import ContactForm from '@/components/ContactForm';
@@ -48,15 +48,19 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
                   <MapPin className="text-primary shrink-0 mt-1" size={20} />
-                  <span className="text-muted text-sm">Industrial Zone, Cairo, Egypt</span>
+                  <span className="text-muted text-sm">262 st. Building 9- New Maadi, Cairo-Egypt</span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <Phone className="text-primary shrink-0" size={20} />
-                  <span className="text-muted text-sm">+20 123 456 789</span>
+                  <span className="text-muted text-sm">+0201223120459</span>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <Printer className="text-primary shrink-0" size={20} />
+                  <span className="text-muted text-sm">+(202) 275 139 52</span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <Mail className="text-primary shrink-0" size={20} />
-                  <span className="text-muted text-sm">sales@egyots.com</span>
+                  <span className="text-muted text-sm">info@egyptoiltools.com</span>
                 </div>
               </div>
             </div>
